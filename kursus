@@ -1,0 +1,43 @@
+import pygame
+import time
+pygame.font.init()
+
+#BAGGRUND
+bredte, højde = 1300, 660   
+win = pygame.display.set_mode((bredte, højde))
+pygame.display.set_caption("python kursus")
+
+#TEXT STØRRELSE OG FORM
+FONT = pygame.font.SysFont("robotic", 70)   
+FONT2 = pygame.font.SysFont("robotic", 27) 
+
+def main(): 
+    game_is_running = True 
+    
+    while game_is_running:  
+        
+        #LUK SPILLET    
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                break
+   
+        #TEXT
+        welcome_text = FONT.render("velkommen til vores python kursus", 2, "white")
+        indledning_text = FONT2.render("Det her er et kursus hvor vi vil prøve at lære jer python.", 2, "white")
+        indledning_text2 = FONT2.render("Vi vil få jer igennem forskellige test og opgaver og øge jeres forståelse for det.", 2, "white")
+        godtræning_text = FONT2.render("God træning.", 2, "white")
+        
+        win.blit(godtræning_text, (200, 280))
+        win.blit(indledning_text, (200, 200))
+        win.blit(indledning_text2, (200, 240))
+        win.blit(welcome_text, (250, 100))
+        
+        pygame.display.update()
+        
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
+#husk at finde ud af hvad enum betyder
+#find ud af hvordan man laver ui
