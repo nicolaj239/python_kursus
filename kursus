@@ -40,4 +40,12 @@ def main():
 if __name__ == "__main__":
     main()
 #husk at finde ud af hvad enum betyder
-#find ud af hvordan man laver ui
+
+
+# tilføj ændringer
+
+# git commit -m "eksempel teksts"
+# git add .
+# git push 
+
+# hent ændringer
